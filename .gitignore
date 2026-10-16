@@ -1,0 +1,35 @@
+# ---- Python ----
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# ---- 下载产物（按需保留/忽略）----
+# 批量下载的视频与音频默认落在 output/ 下，体积大，一般不入库
+output/
+# 散落在根目录的下载文件
+*.mp4
+*.mkv
+*.webm
+*.mp3
+*.m4a
+*.opus
+*.aac
+*.flac
+*.wav
+
+# ---- 临时/系统 ----
+.DS_Store
+*.tmp
+*.part
+*.ytdl
+
+# ---- 本地 cookie / 私密配置（切勿提交）----
+cookies.txt
+*.cookies
+.env
+
+# ---- WorkBuddy 内部状态（非项目代码，含本地路径）----
+.workbuddy/

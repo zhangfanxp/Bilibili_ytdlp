@@ -1,0 +1,18 @@
+[project]
+name = "bili-video-downloader"
+version = "0.1.0"
+description = "Bilibili 视频 / 音频批量下载工具，基于 yt-dlp 开发"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    # 核心下载引擎：从 PyPI 安装，而非本地源码
+    "yt-dlp>=2026.8.19",
+    # B 站空间视频列表抓取脚本（fetch_bili_videos.py）依赖
+    "requests>=2.31.0",
+]
+
+# 本项目是一组可直接运行的脚本（download.py / fetch_bili_videos.py），
+# 不是一个需要被 import 的库，因此声明为非包项目：
+# uv 只会负责创建虚拟环境并安装上面的依赖，不会把本项目自身“安装”进 venv。
+[tool.uv]
+package = false
